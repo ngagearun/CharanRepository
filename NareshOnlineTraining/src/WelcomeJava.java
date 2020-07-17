@@ -37,6 +37,9 @@ public class WelcomeJava {
     		System.out.println(std1.a);
     		
     		
+    		Addition objname=new Addition();
+    		objname.addition(200, 300);
+    		
     		
     		
     	}
