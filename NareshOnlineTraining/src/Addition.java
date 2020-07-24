@@ -3,9 +3,10 @@ public class Addition {
 
 	int sum;
 	
-	void addition(int num1,int num2){
+	int addition(int num1,int num2){
 		sum=num1+num2;
-		System.out.println(sum);
+		return sum;
+		//sSystem.out.println(sum);
 	}
 	
 	
