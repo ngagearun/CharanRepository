@@ -13,6 +13,7 @@ public class LaunchApplication {
 				
           ChromeDriver driver=new ChromeDriver();
           driver.manage().window().maximize();
+          
           driver.navigate().to("https://www.selenium.dev/");
           String titlename=driver.getTitle();
           if(titlename.equalsIgnoreCase("SeleniumHQ Browser Automation")){

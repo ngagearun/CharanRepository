@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class ArrayDemo {
 
@@ -9,6 +11,7 @@ public class ArrayDemo {
 		countrynames[2]="NZ";
 		countrynames[3]="US";
 		countrynames[4]="Austalia";
+	
 		
 		/*int i=0;
 		while(i<5){
