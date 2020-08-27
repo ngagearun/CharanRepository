@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19043" started-at="2020-08-27T03:39:15Z" finished-at="2020-08-27T03:39:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19043" started-at="2020-08-27T03:39:15Z" finished-at="2020-08-27T03:39:34Z">
+      <class name="com.candiatepsiexam.testcases.CreateAnAccount">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="setup" is-config="true" duration-ms="12924" started-at="2020-08-27T09:09:15Z" finished-at="2020-08-27T09:09:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createtheaccout()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="createtheaccout" duration-ms="5809" started-at="2020-08-27T09:09:28Z" finished-at="2020-08-27T09:09:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createtheaccout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="tearDown" is-config="true" duration-ms="266" started-at="2020-08-27T09:09:34Z" finished-at="2020-08-27T09:09:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.candiatepsiexam.testcases.CreateAnAccount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
