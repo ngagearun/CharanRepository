@@ -1,27 +1,46 @@
 package com.candiatepsiexam.testcases;
 
+import java.util.Date;
+import java.util.Random;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
+
+
 import org.testng.annotations.Test;
 
 import com.candiatepsiexams.objectrepositories.Constants;
 import com.candiatepsiexams.reusable.ReusableWebObjects;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class CreateAnAccount extends ReusableWebObjects{
 
-	@BeforeTest
-	public void setup(){
-		launchbrowser("chrome");
-		appurl("https://candidate.psiexams.com/index.jsp");
+	
+	
 		
+	@BeforeClass(groups={"regression","smoke"})
+	public void clickoncreateaccount(){
+		test=report.startTest("creating account page");
+		
+		click(By.linkText(Constants.createaccountlinktext));
+		test.log(LogStatus.PASS, "Account lnk opened");
 	}
 	
-	@Test
-	public void createtheaccount(){		
-		click(By.linkText(Constants.createaccountlinktext));
-		sendtext(By.name(Constants.accountemailid), "ramesh@gmail.com");
+	
+	
+	@Test(priority=4,groups={"regression"})
+	public void createtheaccount() throws InterruptedException{	
+		Thread.sleep(4000);
+		Random r=new Random();
+		int num=r.nextInt(1000);
+		//
+		sendtext(By.name(Constants.accountemailid), "ramesh"+num+"@gmail.com");
 		sendtext(By.name("firstname"), "ramesh");
 		sendtext(By.name("lastname"), "kumar");
 		sendtext(By.name("password"), "123456789Aa!");
@@ -29,12 +48,12 @@ public class CreateAnAccount extends ReusableWebObjects{
 		dropdown(By.name("hintquestion"), "Place of birth");
 		sendtext(By.name("hintanswer"), "Hyderabad");
 		click(By.name("Submit"));
+		test.log(LogStatus.PASS, "Created the account");
 	}
 	
-	@Test
+	@Test(priority=2,groups={"regression"})
 	public void checktheaccountalreadyexist(){
-		
-		click(By.linkText(Constants.createaccountlinktext));
+
 		sendtext(By.name(Constants.accountemailid), "ramesh@gmail.com");
 		sendtext(By.name("firstname"), "ramesh");
 		sendtext(By.name("lastname"), "kumar");
@@ -42,23 +61,21 @@ public class CreateAnAccount extends ReusableWebObjects{
 		sendtext(By.name("confirmpassword"), "123456789Aa!");
 		dropdown(By.name("hintquestion"), "Place of birth");
 		sendtext(By.name("hintanswer"), "Hyderabad");
-		click(By.name("Submit"));
+		click(By.name("Submidt"));
 	}
 	
-	@Test
-	public void createaccountuivalidationmesages(){
-		
-		click(By.linkText(Constants.createaccountlinktext));
+	@Test(priority=1,groups={"regression"},enabled=false)
+	public void createaccountuivalidationmesages() throws InterruptedException{
+		Thread.sleep(4000);
 		click(By.name("Submit"));
 		boolean status=driver.findElement(By.className("errorInline")).isDisplayed();
 		Assert.assertTrue(status, "The validation message is getting displayed");
 		
 	}
 	
-	@Test
-	public void validationpasswordrulematches(){
-		
-		click(By.linkText(Constants.createaccountlinktext));
+	@Test(priority=3,groups={"smoke"})
+	public void validationpasswordrulematches() throws InterruptedException{
+		Thread.sleep(4000);
 		sendtext(By.name(Constants.accountemailid), "ramesh@gmail.com");
 		sendtext(By.name("firstname"), "ramesh");
 		sendtext(By.name("lastname"), "kumar");
@@ -70,10 +87,12 @@ public class CreateAnAccount extends ReusableWebObjects{
 		alert();
 	}
 	
-	
-	@AfterTest
-	public void tearDown(){
-		driver.close();
+	@AfterClass(groups={"regression","smoke"})
+	public void logout(){
+	   click(By.linkText("Logout"));
 	}
+	
+	
+	
 	
 }

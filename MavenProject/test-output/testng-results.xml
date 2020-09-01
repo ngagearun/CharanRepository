@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19043" started-at="2020-08-27T03:39:15Z" finished-at="2020-08-27T03:39:34Z">
+  <suite name="candiatepsiexam" duration-ms="39765" started-at="2020-09-01T03:57:33Z" finished-at="2020-09-01T03:58:13Z">
     <groups>
+      <group name="regression">
+        <method signature="CreateAnAccount.checktheaccountalreadyexist()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="checktheaccountalreadyexist" class="com.candiatepsiexam.testcases.CreateAnAccount"/>
+        <method signature="CreateAnAccount.createtheaccount()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="createtheaccount" class="com.candiatepsiexam.testcases.CreateAnAccount"/>
+        <method signature="RegisterForExamination.verifytestcenterpopupscreens()[pri:0, instance:com.candiatepsiexam.testcases.RegisterForExamination@7f416310]" name="verifytestcenterpopupscreens" class="com.candiatepsiexam.testcases.RegisterForExamination"/>
+      </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="19043" started-at="2020-08-27T03:39:15Z" finished-at="2020-08-27T03:39:34Z">
+    <test name="regressiontesting" duration-ms="39765" started-at="2020-09-01T03:57:33Z" finished-at="2020-09-01T03:58:13Z">
+      <class name="com.candiatepsiexam.testcases.RegisterForExamination">
+        <test-method status="PASS" signature="clickonRegisterlink()[pri:0, instance:com.candiatepsiexam.testcases.RegisterForExamination@7f416310]" name="clickonRegisterlink" is-config="true" duration-ms="1858" started-at="2020-09-01T09:28:06Z" finished-at="2020-09-01T09:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonRegisterlink -->
+        <test-method status="PASS" signature="verifytestcenterpopupscreens()[pri:0, instance:com.candiatepsiexam.testcases.RegisterForExamination@7f416310]" name="verifytestcenterpopupscreens" duration-ms="4263" started-at="2020-09-01T09:28:08Z" finished-at="2020-09-01T09:28:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytestcenterpopupscreens -->
+      </class> <!-- com.candiatepsiexam.testcases.RegisterForExamination -->
       <class name="com.candiatepsiexam.testcases.CreateAnAccount">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="setup" is-config="true" duration-ms="12924" started-at="2020-08-27T09:09:15Z" finished-at="2020-08-27T09:09:28Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="setup" is-config="true" duration-ms="9074" started-at="2020-09-01T09:27:33Z" finished-at="2020-09-01T09:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="createtheaccout()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="createtheaccout" duration-ms="5809" started-at="2020-08-27T09:09:28Z" finished-at="2020-08-27T09:09:34Z">
+        <test-method status="PASS" signature="clickoncreateaccount()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="clickoncreateaccount" is-config="true" duration-ms="1392" started-at="2020-09-01T09:27:42Z" finished-at="2020-09-01T09:27:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createtheaccout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@35851384]" name="tearDown" is-config="true" duration-ms="266" started-at="2020-08-27T09:09:34Z" finished-at="2020-08-27T09:09:34Z">
+        </test-method> <!-- clickoncreateaccount -->
+        <test-method status="PASS" signature="checktheaccountalreadyexist()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="checktheaccountalreadyexist" duration-ms="12345" started-at="2020-09-01T09:27:44Z" finished-at="2020-09-01T09:27:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checktheaccountalreadyexist -->
+        <test-method status="PASS" signature="createtheaccount()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="createtheaccount" duration-ms="7287" started-at="2020-09-01T09:27:56Z" finished-at="2020-09-01T09:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createtheaccount -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="logout" is-config="true" duration-ms="2381" started-at="2020-09-01T09:28:04Z" finished-at="2020-09-01T09:28:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.candiatepsiexam.testcases.CreateAnAccount@6366ebe0]" name="tearDown" is-config="true" duration-ms="1143" started-at="2020-09-01T09:28:12Z" finished-at="2020-09-01T09:28:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.candiatepsiexam.testcases.CreateAnAccount -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- regressiontesting -->
+  </suite> <!-- candiatepsiexam -->
 </testng-results>
